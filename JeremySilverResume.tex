@@ -1,0 +1,295 @@
+\documentclass[letterpaper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Package loading
+
+
+\usepackage[letterpaper,left=7mm,right=7mm,top=4mm,bottom=0mm]{geometry}
+\usepackage{graphicx,nopageno}
+\usepackage[compact]{titlesec}
+\hyphenation{LabVIEW}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Custom commands
+
+\makeatletter
+\newcommand*{\compress}{\@minipagetrue}
+\makeatother
+
+\newcommand{\rsection}[4]{\noindent
+%\begin{minipage}{\linewidth}
+\hspace{5pt}\textbf{#1} #2 \hfill \textbf{#3}\\
+\parbox{.9\textwidth}{#4}
+%\end{minipage}
+}
+
+\newcommand{\risection}[4]{\noindent
+%\begin{minipage}{\linewidth}
+\hspace{5pt}\textbf{#1} #2 \hfill \textbf{#3}\\
+\parbox{.9\textwidth}{
+\begin{ritemize}
+#4
+\end{ritemize}
+}
+%\end{minipage}
+}
+
+
+
+\newenvironment{ritemize}{
+\compress\vskip 5pt
+\begin{itemize}
+  \setlength{\itemsep}{-1pt}
+  \setlength{\partopsep}{-5pt}
+  \setlength{\parsep}{0pt}
+  \setlength{\topsep}{0pt}
+  }
+  {
+  \end{itemize}
+  }
+
+
+\renewcommand{\labelitemi}{$-$}
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfill\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+
+\begin{document}\raggedbottom
+\hrule\smallskip
+\raisebox{-9mm}{
+%\includegraphics[width=3in]{JS}
+\textbf{\fontsize{33}{39.6}{\selectfont Jeremy Silver}}
+}
+\hfill
+%\begin{tabular}{l}
+%\hspace{-5pt}\textbf{Permanent:}\\
+%248 NW Wilmington Ave.\\
+%Bend, OR. 97701\\
+%(541)-385-1061\\
+%jeremysilvertongue@gmail.com\\
+%\end{tabular}
+\begin{tabular}{l}
+%\hspace{-5pt}\textbf{Academic Year:}\\
+1717 SW Park Ave.\\
+Apartment \#803\\
+Portland, OR. 97201\\
+(503)-502-2958\\
+jeremy.silver@alumni.reed.edu\\
+\end{tabular}\\
+\smallskip
+\hrule
+\large
+
+
+%\section*{Education}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+\risection{Reed College}
+{BA, Physics. Portland, Oregon.}
+{May 2011}
+{
+\item Thesis on the use of numerical differential equation solving and genetic algorithms to
+  simulate and optimize human movement.
+\item Course work in calculus, linear and abstract
+  algebra, scientific computation, electrodynamics, elementary
+  particles, as well as classical, quantum, thermal, and solid-state
+  physics.
+\item Laboratory work in electronics, optics, kinematics,
+  electromagnetism, and machine tooling.
+\item Projects included measuring the temperature dependance of diode
+  reverse bias leakage current, improvised synthesis of fullerenes
+  using a welding power supply, and creation of an interactive computer
+  model simulating the interaction and collision of charged particles.
+}
+
+\hrule\bigskip
+\risection{Hardware Lab Intern}
+{Allion USA, Portland, Oregon.}% Tanisbourne?
+{January 2014--Present}
+{
+\item Worked on real-time framework for machine vision processing of high speed camera output.
+\item Developed novel class of trinary/n-ary codes with desirable Hamming distance properties.
+}
+
+
+
+\risection{Scientific Applications Intern}
+{Apple Inc. Portland, Oregon.}
+{June 2011--August 2013}
+{
+\item Developed novel algorithms with the Advanced Computation Group in the fields of sound compression, image compression, image enhancement, machine vision, and error correction coding.
+\item Set up 3D scanning and printing lab and created tools for interactive markup of 3D meshes.
+  \item Coinvented, prototyped, and wrote patent documentation for a novel image magnification algorithm. Collaborated on a real time OpenCL implementation of the algorithm.
+}
+
+\risection{Requalification Supervisor}
+{Reed Research Reactor, Portland, Oregon.}
+{September 2007--June 2011}
+{
+\item Created and administered written and practical exams to the
+  staff, gave training and requalification lectures, maintained
+  requalification database, and founded
+  enrichment lecture series.
+\item As a licensed Senior Reactor Operator, performed reactor
+ maintenance, led tours, operated and supervised reactor
+  operation, calibrated radiation monitors, and performed neutron
+  activation analysis experiments.
+\item Participated in control rod inspection, thermal power
+  calibration, fuel inspection, and refueling. Organized and performed recovery of a dropped fuel element.
+}
+
+\risection{Student Engineer}
+{US Nuclear Regulatory Commission, Washington DC.}
+{June--August 2009}
+{
+\item Wrote and contributed to numerous reports and white papers
+  including an assessment of the safety hazards associated with
+  the aqueous homogeneous reactor type and its viability for producing
+  radiopharmaceutical precursors.
+%\item Composed the charter and communication plan of a working group addressing a radiopharmaceutical shortage.
+\item Assisted in inspections of the NIST and UNM research reactors
+  and contributed to the relicensing safety evaluation report of the
+  latter.
+}\hrule\bigskip
+\risection{Software and Electronics Skills}
+{}
+{}
+{
+\item Window, OSX, Ubuntu, Microsoft Office/OfficeLibre, \LaTeX, Mathematica, MATLAB, LabVIEW, GammaVision, InkScape, Audacity, Git, and Mercurial. Xcode, Visual Studio, Wolfram Workbench, and Eclipse.
+\item C, C++, Objective-C, Java, and OpenCL. Cocoa, SceneKit, OpenGL, OpenCV.
+\item Digital oscilloscope, computer controlled multimeter and
+  breadboard, function generator, AC/DC power supply, stage lighting,
+  audio mixing board, soldering, basic circuit design,
+  computer hardware and networking.
+}
+\end{document} 
+
+\risection{Other Skills}
+{}
+{}
+{
+\item Machining mill, CNC mill, leadscrew lathe, woodworking
+  tools, soldering, and duct tape.
+\item Basic plumbing and carpentry.
+\item Driving in all weather conditions including snow and
+  ice. Oregon licence with motorcycle endorsement.
+}
+
+
+
+
+%\risection{Wet-deck Operator}
+%{MicroSemi PPG, Bend, Oregon.} 
+%{June--August, 2008}
+%{
+%\item Ran five production lines performing chemical etching and stripping processes involved in microchip fabrication.
+%}
+
+
+%\rsection{Camp Counselor/Technical Theater Assistant}
+%{Young Musicians and Artists, Salem, OR.}
+%{July, 2006}
+%{
+%\item Assisted in teaching campers theatrical lighting, rigging, and
+%  sound design.
+%\item Established safety culture among students spending many hours on
+%  up to 30' ladders.
+%\item Forged a rabble of middle-schoolers into an effective team.
+%}
+
+
+\pagebreak
+
+\vspace*{3mm}
+
+\section*{Other Experience}
+
+\rsection{Community Theater}
+{2nd Street Theater and Cascades Theatrical Company, Bend, Oregon.}
+{2004--2007}
+{
+\item Performed with local theatrical companies in five productions of
+  20 performances each. Roles included John in \textsl{The Lion in
+    Winter}, the Dog in \textsl{Blind Willie and the Talking Dog}, and an
+  ensemble member in  \textsl{Jesus Christ Superstar}.
+\item Ran lights and performed other technical work for a further two
+  shows; \textsl{Chicago} and \textsl{Sweet Charity}.
+}
+
+\rsection{Member of Debate Team}
+{Summit High School, Bend, Oregon.}
+{2005--2007}
+{
+\item Attained membership with special distinction in the National
+  Forensic League.
+\item Competed in the 2006 NFL National Tournament in public forum debate
+  and the 2007 National Tournament in international extemporaneous
+  speaking.
+}
+
+\rsection{High School Theater}
+{Summit High School, Bend, Oregon.}
+{2005--2007}
+{
+\item Performed in and built sets for three productions
+  including \textsl{The Taming of the Shrew}.
+\item Stepped in for a sick actor two weeks before opening night.
+}
+
+\section*{Skills}
+
+\rsection{Software and Electronics}
+{I am competent in the following:}
+{}
+{
+\item All major operating systems, Microsoft Office, Open Office, Emacs, \LaTeX,
+  Mathematica, MATLAB, LabVIEW, GammaVision, InkScape, and Audacity. Xcode, Visual Studio, Wolfram Workbench, and Eclipse.
+\item Digital oscilloscope, computer controlled multimeter and
+  breadboard, function generator, AC/DC power supply, stage lighting,
+  audio capture and playback, soldering, basic circuit design, and
+  computer hardware.
+}
+
+\rsection{Other Skills}
+{}
+{}
+{
+\item Machining mill, CNC mill, leadscrew lathe, woodworking
+  tools, soldering, and duct tape.
+\item Basic plumbing and carpentry.
+\item Driving in all weather conditions including snow and
+  ice. Oregon licence with motorcycle endorsement.
+}
+
+
+
+\rsection{Interests/Hobbies}{}{}{
+\item CrossFit; competitive fitness program combining power
+  lifting, Olympic lifting, gymnastics, and metabolic
+  conditioning. Attempting to qualify for the 2012 CrossFit Games.
+\item Competitive StarCraft 2. Ranked platinum in all game types. The
+  game involves performing more than a hundred actions per minute,
+  coordinating with teammates, and making very rapid tactical and
+  strategic decisions.
+}
+
+
+
+\end{document}
+
+
+
+
+%% \rsection{Summit High School}
+%% {Graduated with honors. Bend, Oregon.}
+%% {June, 2007}
+%% {
+%% \begin{ritemize}
+%% \item Advanced placement course work in physics, chemistry, biology,
+%%   calculus, Spanish, European history, English language and
+%%   composition, and US government.
+%% \item Extracurricular activities include anchoring daily television
+%%   news, GSA, Wikipedia club, weight training, lacrosse, cross country
+%%   running, debate (including two national championships), and theater.  
+%%   \end{ritemize}
+%% }
