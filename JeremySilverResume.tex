@@ -1,37 +1,30 @@
 \documentclass[letterpaper]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Package loading
-
-
-\usepackage[letterpaper,left=7mm,right=7mm,top=4mm,bottom=0mm]{geometry}
+\usepackage[letterpaper,left=12mm,right=12mm,top=9mm,bottom=0mm]{geometry}
 \usepackage{graphicx,nopageno}
 \usepackage[compact]{titlesec}
+\usepackage{hyperref}
 \hyphenation{LabVIEW}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Custom commands
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Custom commands
 \makeatletter
 \newcommand*{\compress}{\@minipagetrue}
 \makeatother
 
-\newcommand{\rsection}[4]{\noindent
-%\begin{minipage}{\linewidth}
+\newcommand{\rsection}[4]{\noindent\large
 \hspace{5pt}\textbf{#1} #2 \hfill \textbf{#3}\\
-\parbox{.9\textwidth}{#4}
-%\end{minipage}
+\parbox{.95\textwidth}{#4}
 }
 
-\newcommand{\risection}[4]{\noindent
-%\begin{minipage}{\linewidth}
-\hspace{5pt}\textbf{#1} #2 \hfill \textbf{#3}\\
-\parbox{.9\textwidth}{
+\newcommand{\risection}[4]{\noindent\large
+\textbf{#1} #2 \hfill \textbf{#3}\\
+\parbox{.95\textwidth}{
 \begin{ritemize}
 #4
 \end{ritemize}
 }
-%\end{minipage}
 }
-
-
 
 \newenvironment{ritemize}{
 \compress\vskip 5pt
@@ -45,7 +38,6 @@
   \end{itemize}
   }
 
-
 \renewcommand{\labelitemi}{$-$}
 
 \newenvironment{absolutelynopagebreak}
@@ -54,89 +46,94 @@
   {\par\xdef\tpd{\the\prevdepth}\egroup
    \prevdepth=\tpd}
 
-
-\begin{document}\raggedbottom
-\hrule\smallskip
-\raisebox{-9mm}{
-%\includegraphics[width=3in]{JS}
-\textbf{\fontsize{33}{39.6}{\selectfont Jeremy Silver}}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header
+\begin{document}\raggedbottom\hrule\medskip\hfill
+\raisebox{-1.5mm}{\Huge Jeremy Silver}
 \hfill
-%\begin{tabular}{l}
-%\hspace{-5pt}\textbf{Permanent:}\\
-%248 NW Wilmington Ave.\\
-%Bend, OR. 97701\\
-%(541)-385-1061\\
-%jeremysilvertongue@gmail.com\\
-%\end{tabular}
-\begin{tabular}{l}
-%\hspace{-5pt}\textbf{Academic Year:}\\
-1717 SW Park Ave.\\
-Apartment \#803\\
-Portland, OR. 97201\\
-(503)-502-2958\\
-jeremy.silver@alumni.reed.edu\\
-\end{tabular}\\
-\smallskip
+\begin{tabular}{lr}
+575 S Rengstorff Ave. Apt \# 77 & \href{mailto:jeremysilvertongue@gmail.com}{jeremysilvertongue@gmail.com}\\
+Mountain View, CA. 94040 &
+\href{https://github.com/jeremysilvertongue}{github.com/jeremysilvertongue}\\
+(503)-502-2958 & \href{https://linkedin.com/in/jeremysilvertongue}{linkedin.com/in/jeremysilvertongue}
+\end{tabular}
+\medskip
 \hrule
-\large
-
-
-%\section*{Education}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education
 \risection{Reed College}
 {BA, Physics. Portland, Oregon.}
 {May 2011}
 {
-\item Thesis on the use of numerical differential equation solving and genetic algorithms to
-  simulate and optimize human movement.
-\item Course work in calculus, linear and abstract
-  algebra, scientific computation, electrodynamics, elementary
-  particles, as well as classical, quantum, thermal, and solid-state
-  physics.
-\item Laboratory work in electronics, optics, kinematics,
-  electromagnetism, and machine tooling.
-\item Projects included measuring the temperature dependance of diode
-  reverse bias leakage current, improvised synthesis of fullerenes
-  using a welding power supply, and creation of an interactive computer
-  model simulating the interaction and collision of charged particles.
+\item Thesis on the use of numerical differential equation solving and genetic algorithms to simulate and optimize human movement.
+\item Course work in calculus, linear and abstract algebra, scientific computation, electrodynamics, elementary particles, as well as classical, quantum, thermal, and solid-state physics.
+\item Laboratory work in electronics, optics, kinematics, electromagnetism, and machine tooling.
+\item Projects included measuring the temperature dependence of diode reverse bias leakage current, improvised synthesis of fullerenes using a welding power supply, and creation of an interactive computer model simulating the interaction and collision of charged particles.
 }
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience
 \hrule\bigskip
-\risection{Hardware Lab Intern}
-{Allion USA, Portland, Oregon.}% Tanisbourne?
-{January 2014--Present}
+\risection{Course Developer}
+{Udacity Inc. Mountain View, CA.}
+{February 2015--Present}
 {
-\item Worked on real-time framework for machine vision processing of high speed camera output.
-\item Developed novel class of trinary/n-ary codes with desirable Hamming distance properties.
+\item Created \href{https://www.udacity.com/course/gradle-for-android-and-java--ud867}{UD867: Gradle for Android and Java,} an online course with over 10,000 enrolled students.
+\item Building a forthcoming Java game development course in partnership with Amazon.
 }
 
+\risection{Course Manager}
+{Udacity Inc. Mountain View, CA.}
+{April 2014--February 2015}
+{
+\item Mentored students in numerous courses including, Intro to Data Science, Developing Android Apps, Software Architecture and Design, and Developing Scalable Apps in Java,
+\item Lead testing and QA on Intro to Machine Learning, Data Visualization, and Model Building and Validation.
+}
 
+\risection{Hardware Lab Intern}
+{Allion USA, Portland, Oregon.}
+{January 2014--April 2014}
+{
+\item Built stages of a machine vision pipeline for real-time processing of high speed camera output.
+\item Invented class of ternary/n-ary codes with desirable Hamming distance properties.
+}
 
 \risection{Scientific Applications Intern}
 {Apple Inc. Portland, Oregon.}
 {June 2011--August 2013}
 {
 \item Developed novel algorithms with the Advanced Computation Group in the fields of sound compression, image compression, image enhancement, machine vision, and error correction coding.
-\item Set up 3D scanning and printing lab and created tools for interactive markup of 3D meshes.
-  \item Coinvented, prototyped, and wrote patent documentation for a novel image magnification algorithm. Collaborated on a real time OpenCL implementation of the algorithm.
+\item Created 3D scanning and printing lab and wrote tools for interactive markup of 3D meshes.
+\item Coinvented, prototyped, and wrote patent documentation for a novel image magnification algorithm. Collaborated on a real time OpenCL implementation of the algorithm.
 }
 
 \risection{Requalification Supervisor}
 {Reed Research Reactor, Portland, Oregon.}
 {September 2007--June 2011}
 {
-\item Created and administered written and practical exams to the
-  staff, gave training and requalification lectures, maintained
-  requalification database, and founded
-  enrichment lecture series.
-\item As a licensed Senior Reactor Operator, performed reactor
- maintenance, led tours, operated and supervised reactor
-  operation, calibrated radiation monitors, and performed neutron
-  activation analysis experiments.
-\item Participated in control rod inspection, thermal power
-  calibration, fuel inspection, and refueling. Organized and performed recovery of a dropped fuel element.
+\item Created and administered written and practical exams to the staff, gave training and requalification lectures, and founded an enrichment lecture series.
+\item As a licensed Senior Reactor Operator: performed and supervised reactor power changes, calibrated radiation monitors, and performed neutron activation analysis experiments.
+\item Participated in control rod and fuel inspections, thermal power calibration, and refueling operations. Organized and performed recovery of a dropped fuel element.
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skills
+\hrule\bigskip
+\risection{Skills}
+{}
+{}
+{
+\item Python, Java, and Objective-C. Familiar with C, C++, Swift, HTML, CSS, and JavaScript.
+\item Android, Google AppEngine, OpenGL/CL/CV.
+\item Git, Mercurial, Gradle, Mathematica, MATLAB, LabVIEW, \LaTeX.
+
+
+% \item Digital oscilloscope, computer controlled multimeter and breadboard, function generator, AC/DC power supply, stage lighting, audio mixing board, soldering, basic circuit design, computer hardware and networking.
+% \item Machining mill, CNC mill, leadscrew lathe, woodworking tools, soldering, and duct tape.
+% \item Basic plumbing and carpentry.
+% \item Driving in all weather conditions including snow and ice. Oregon license with motorcycle endorsement.
+}
+
+\end{document}
+
+
 
 \risection{Student Engineer}
 {US Nuclear Regulatory Commission, Washington DC.}
@@ -146,65 +143,31 @@ jeremy.silver@alumni.reed.edu\\
   including an assessment of the safety hazards associated with
   the aqueous homogeneous reactor type and its viability for producing
   radiopharmaceutical precursors.
-%\item Composed the charter and communication plan of a working group addressing a radiopharmaceutical shortage.
+\item Composed the charter and communication plan of a working group addressing a radiopharmaceutical shortage.
 \item Assisted in inspections of the NIST and UNM research reactors
   and contributed to the relicensing safety evaluation report of the
   latter.
-}\hrule\bigskip
-\risection{Software and Electronics Skills}
-{}
-{}
-{
-\item Window, OSX, Ubuntu, Microsoft Office/OfficeLibre, \LaTeX, Mathematica, MATLAB, LabVIEW, GammaVision, InkScape, Audacity, Git, and Mercurial. Xcode, Visual Studio, Wolfram Workbench, and Eclipse.
-\item C, C++, Objective-C, Java, and OpenCL. Cocoa, SceneKit, OpenGL, OpenCV.
-\item Digital oscilloscope, computer controlled multimeter and
-  breadboard, function generator, AC/DC power supply, stage lighting,
-  audio mixing board, soldering, basic circuit design,
-  computer hardware and networking.
-}
-\end{document} 
-
-\risection{Other Skills}
-{}
-{}
-{
-\item Machining mill, CNC mill, leadscrew lathe, woodworking
-  tools, soldering, and duct tape.
-\item Basic plumbing and carpentry.
-\item Driving in all weather conditions including snow and
-  ice. Oregon licence with motorcycle endorsement.
 }
 
+\risection{Wet-deck Operator}
+{MicroSemi PPG, Bend, Oregon.}
+{June--August, 2008}
+{
+\item Ran five production lines performing chemical etching and stripping processes involved in microchip fabrication.
+}
 
+\risection{Camp Counselor/Technical Theater Assistant}
+{Young Musicians and Artists, Salem, OR.}
+{July, 2006}
+{
+\item Assisted in teaching campers theatrical lighting, rigging, and
+ sound design.
+\item Established safety culture among students spending many hours on
+ up to 30' ladders.
+\item Forged a rabble of middle-schoolers into an effective team.
+}
 
-
-%\risection{Wet-deck Operator}
-%{MicroSemi PPG, Bend, Oregon.} 
-%{June--August, 2008}
-%{
-%\item Ran five production lines performing chemical etching and stripping processes involved in microchip fabrication.
-%}
-
-
-%\rsection{Camp Counselor/Technical Theater Assistant}
-%{Young Musicians and Artists, Salem, OR.}
-%{July, 2006}
-%{
-%\item Assisted in teaching campers theatrical lighting, rigging, and
-%  sound design.
-%\item Established safety culture among students spending many hours on
-%  up to 30' ladders.
-%\item Forged a rabble of middle-schoolers into an effective team.
-%}
-
-
-\pagebreak
-
-\vspace*{3mm}
-
-\section*{Other Experience}
-
-\rsection{Community Theater}
+\risection{Community Theater}
 {2nd Street Theater and Cascades Theatrical Company, Bend, Oregon.}
 {2004--2007}
 {
@@ -216,7 +179,7 @@ jeremy.silver@alumni.reed.edu\\
   shows; \textsl{Chicago} and \textsl{Sweet Charity}.
 }
 
-\rsection{Member of Debate Team}
+\risection{Member of Debate Team}
 {Summit High School, Bend, Oregon.}
 {2005--2007}
 {
@@ -227,7 +190,7 @@ jeremy.silver@alumni.reed.edu\\
   speaking.
 }
 
-\rsection{High School Theater}
+\risection{High School Theater}
 {Summit High School, Bend, Oregon.}
 {2005--2007}
 {
@@ -236,60 +199,19 @@ jeremy.silver@alumni.reed.edu\\
 \item Stepped in for a sick actor two weeks before opening night.
 }
 
-\section*{Skills}
 
-\rsection{Software and Electronics}
-{I am competent in the following:}
-{}
+\rsection{Summit High School}
+{Graduated with honors. Bend, Oregon.}
+{June, 2007}
 {
-\item All major operating systems, Microsoft Office, Open Office, Emacs, \LaTeX,
-  Mathematica, MATLAB, LabVIEW, GammaVision, InkScape, and Audacity. Xcode, Visual Studio, Wolfram Workbench, and Eclipse.
-\item Digital oscilloscope, computer controlled multimeter and
-  breadboard, function generator, AC/DC power supply, stage lighting,
-  audio capture and playback, soldering, basic circuit design, and
-  computer hardware.
-}
-
-\rsection{Other Skills}
-{}
-{}
-{
-\item Machining mill, CNC mill, leadscrew lathe, woodworking
-  tools, soldering, and duct tape.
-\item Basic plumbing and carpentry.
-\item Driving in all weather conditions including snow and
-  ice. Oregon licence with motorcycle endorsement.
+\begin{ritemize}
+\item Advanced placement course work in physics, chemistry, biology,
+  calculus, Spanish, European history, English language and
+  composition, and US government.
+\item Extracurricular activities include anchoring daily television
+  news, GSA, Wikipedia club, weight training, lacrosse, cross country
+  running, debate (including two national championships), and theater.
+  \end{ritemize}
 }
 
 
-
-\rsection{Interests/Hobbies}{}{}{
-\item CrossFit; competitive fitness program combining power
-  lifting, Olympic lifting, gymnastics, and metabolic
-  conditioning. Attempting to qualify for the 2012 CrossFit Games.
-\item Competitive StarCraft 2. Ranked platinum in all game types. The
-  game involves performing more than a hundred actions per minute,
-  coordinating with teammates, and making very rapid tactical and
-  strategic decisions.
-}
-
-
-
-\end{document}
-
-
-
-
-%% \rsection{Summit High School}
-%% {Graduated with honors. Bend, Oregon.}
-%% {June, 2007}
-%% {
-%% \begin{ritemize}
-%% \item Advanced placement course work in physics, chemistry, biology,
-%%   calculus, Spanish, European history, English language and
-%%   composition, and US government.
-%% \item Extracurricular activities include anchoring daily television
-%%   news, GSA, Wikipedia club, weight training, lacrosse, cross country
-%%   running, debate (including two national championships), and theater.  
-%%   \end{ritemize}
-%% }
