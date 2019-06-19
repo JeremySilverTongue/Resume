@@ -130,3 +130,5 @@ sympy-plots-for-*.tex/
 *.tex~
 
 .DS_Store
+*.ini
+*.tex#
